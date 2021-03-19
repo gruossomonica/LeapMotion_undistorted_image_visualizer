@@ -8,7 +8,6 @@ import Leap
 # - LeapPython.pyd (generated... see *)
 # *Generating a Python 3.x Wrapper with SWIG (in my case Python 3.7 with Swig 2.0.9):
 # https://support.leapmotion.com/hc/en-us/articles/360004362237-Generating-a-Python-3-3-0-Wrapper-with-SWIG-2-0-9
-# my visual studio project: C:\Users\Monica Gruosso\source\repos\leap_python37 (Release x64)
 
 import cv2
 import numpy as np
@@ -19,9 +18,8 @@ from thread_definition import *
 PATH_CAM_IMG = "cam_images"
 PATH_LEAP_IMG = "leap_images"
 
-## v3 sdk: https://developer.leapmotion.com/releases/leap-motion-orion-321
-## Set up: https://developer-archive.leapmotion.com/documentation/python/devguide/Project_Setup.html#importing-the-leap-motion-module
-# https://developer-archive.leapmotion.com/documentation/python/devguide/Leap_Images.html (see "Correction using bilinear interpolation" -- find OpenCV)
+## Leap Motion SDK v3: https://developer.leapmotion.com/releases/leap-motion-orion-321
+## Set up guide: https://developer-archive.leapmotion.com/documentation/python/devguide/Project_Setup.html#importing-the-leap-motion-module
 
 def capture_images(cam, leap, image_visualizer):
     # Capture images until 'q' is pressed
@@ -69,14 +67,13 @@ def main():
     # Before you can get image data, you must set the POLICY_IMAGES flag
     controller.set_policy(Leap.Controller.POLICY_IMAGES)
     
-    # Add listener
+    # Example -- Add listener
     #controller.add_listener(listener)    
     # Keep this process running until Enter is pressed
     # print("Press Enter to quit...")
     # sys.stdin.readline()
     # Remove the sample listener when done
-    #controller.remove_listener(listener)
-        
+    #controller.remove_listener(listener) 
        
     # Start the Leap Capture Thread
     leap = LeapImageThread(controller)
