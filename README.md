@@ -27,7 +27,7 @@ python leap_camera_control.py
 You can run the code in a virtual enviroment, e.g., [venv](https://docs.python.org/3/library/venv.html), [Anaconda](https://www.anaconda.com/products/individual) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 
 Press `q` to stop execution and exit. 
-Press `s` to save images in folders. The folder paths are defined [here](https://github.com/gruossomonica/LeapMotion_Undistorted_Image_Visualizer/blob/7f627de95ac4f857605f8243ef470872e0f050bd/leap_camera_control.py#L18-L19).
+Press `s` to save images in folders. The folder paths are set [here](https://github.com/gruossomonica/LeapMotion_Undistorted_Image_Visualizer/blob/7f627de95ac4f857605f8243ef470872e0f050bd/leap_camera_control.py#L18-L19).
 
 Two threads starts: one is related to the Leap Motion controller and IR images acquisition, the other manages the webcam execution flow. 
 The theard definition is provided in `thread_definition.py`.
