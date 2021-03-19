@@ -58,22 +58,11 @@ def main():
 
     # Create setting window
     image_visualizer.createSettingWindow('Leap Image Settings')    
-            
-    # Create an event listener
-    #listener = LeapEventListener()
     
     # Get the controller
     controller = Leap.Controller()
     # Before you can get image data, you must set the POLICY_IMAGES flag
-    controller.set_policy(Leap.Controller.POLICY_IMAGES)
-    
-    # Example -- Add listener
-    #controller.add_listener(listener)    
-    # Keep this process running until Enter is pressed
-    # print("Press Enter to quit...")
-    # sys.stdin.readline()
-    # Remove the sample listener when done
-    #controller.remove_listener(listener) 
+    controller.set_policy(Leap.Controller.POLICY_IMAGES) 
        
     # Start the Leap Capture Thread
     leap = LeapImageThread(controller)
@@ -84,6 +73,16 @@ def main():
     cam.start()  
     
     capture_images(cam, leap, image_visualizer)
-        
+    
+    # Example -- Add and remove listener
+    # Create an event listener
+    # listener = LeapEventListener()
+    # controller.add_listener(listener)    
+    # Keep this process running until Enter is pressed
+    # print("Press Enter to quit...")
+    # sys.stdin.readline()
+    # Remove the sample listener when done
+    # controller.remove_listener(listener)
+
 if __name__ == "__main__":
     main()
