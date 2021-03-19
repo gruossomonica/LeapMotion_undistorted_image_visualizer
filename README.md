@@ -29,8 +29,6 @@ There is an interesting discussion on using the listener in the [Leap Motion dev
 A simple setting window is also defined using OpenCV. It can be used to change the gamma and contrast of the undistorted IR images.
 You can change the code in the `ImageVisualizer` class defined in `image_utils.py` to add more parameters to the settings window.
 
-The `image_utils.py` file contains the image processing code. The distortion of the data acquired by the Leap Motion was corrected using bilinear interpolation. Other useful information about distortion maps can be found in [Leap Moti
+The `image_utils.py` file contains the image processing code. The distortion of the data acquired by the Leap Motion was corrected using bilinear interpolation. Other useful information about distortion maps can be found in [Leap Motion API documentation](https://developer-archive.leapmotion.com/documentation/python/devguide/Leap_Images.html?proglang=python).
 
-
-API documentation](https://developer-archive.leapmotion.com/documentation/python/devguide/Leap_Images.html?proglang=python).
 
