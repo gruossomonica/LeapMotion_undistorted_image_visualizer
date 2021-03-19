@@ -79,6 +79,7 @@ def undistort(image, coordinate_map, coefficient_map, width, height):
                              cv2.INTER_LINEAR)
     return destination
 
+
 class ImageVisualizer:
     
     def __init__(self):
