@@ -31,7 +31,7 @@ Press `s` to save images in folders. The folder paths are set [here](https://git
 
 Two threads starts: one is related to the Leap Motion controller and IR images acquisition, the other manages the webcam execution flow. 
 The theard definition is provided in `thread_definition.py`.
-If you prefere to use listener to manage the Leap Motion controller, please follow the example provided in comments of the main file and in `leap_listener.py`.
+If you prefere to use listeners to manage the Leap Motion controller, please follow the example provided in `leap_listener.py`.
 There is an interesting discussion on using the listener on the [Leap Motion developer guide](https://developer-archive.leapmotion.com/documentation/python/devguide/Sample_Tutorial.html#id40).
 
 A simple setting window is also defined using OpenCV. It can be used to change the gamma and contrast of the undistorted IR images.
