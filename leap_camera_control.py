@@ -11,7 +11,7 @@ import Leap
 
 import cv2
 import numpy as np
-from leap_listener import LeapEventListener
+#from leap_listener import LeapEventListener
 from image_utils import *
 from thread_definition import *
 
