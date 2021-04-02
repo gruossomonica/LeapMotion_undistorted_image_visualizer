@@ -19,7 +19,7 @@ This repo contains the source code of a visualizer built with Python 3.7.0 and O
 
 Install all dependencies as indicated in the [Requirements Section](#requirements).
 
-The main file is the `leap_camera_control.py`. 
+The main file is `leap_camera_control.py`. 
 Run the following command to execute it:
 ```
 python leap_camera_control.py
