@@ -30,7 +30,7 @@ Press `q` to stop execution and exit.
 Press `s` to save images in folders. The folder paths are set [here](https://github.com/gruossomonica/LeapMotion_Undistorted_Image_Visualizer/blob/7f627de95ac4f857605f8243ef470872e0f050bd/leap_camera_control.py#L18-L19).
 
 Two threads starts: one is related to the Leap Motion controller and IR images acquisition, the other manages the webcam execution flow. 
-The theard definition is provided in `thread_definition.py`.
+The theard definition is provided in `thread_definition.py`. 
 If you prefere to use listeners to manage the Leap Motion controller, please follow the example provided in `leap_listener.py`.
 There is an interesting discussion on using the listener on the [Leap Motion developer guide](https://developer-archive.leapmotion.com/documentation/python/devguide/Sample_Tutorial.html#id40).
 
@@ -39,3 +39,15 @@ You can change the code in the `ImageVisualizer` class defined in `image_utils.p
 
 The `image_utils.py` file contains the image processing code. The distortion of the data acquired by the Leap Motion is corrected using bilinear interpolation. Other useful information about distortion maps can be found in the [Leap Motion API documentation page](https://developer-archive.leapmotion.com/documentation/python/devguide/Leap_Images.html?proglang=python). 
 Examples of raw and undistorted images can be found in the `images` folder.
+
+
+## FAQ
+
+**Q:** Why is the webcam preview not showing?
+
+**A:** First, check the webcam is properly connected to your pc and is working. Then, try to change the device ID indicated in the code [here](https://github.com/gruossomonica/LeapMotion_undistorted_image_visualizer/blob/d2f7ffa1ced14430bbf4aaa1104a0e340bc69fbf/leap_camera_control.py#L72).  It is set to 0 by default.
+
+**Q:** Why is the Leap Motion controller preview not showing?
+
+**A:** Please, run the Leap Motion Visualizer to check your device is working properly. This can be found in the Leap Motion Control Panel (more info [here](https://developer.leapmotion.com/desktop-leap-motion-controller/)). If it is working, make sure that the [requirements](#requirements) are all met.
+ 
